@@ -1,0 +1,18 @@
+<div class="row-container">
+    <div class="row-cell">
+        <p>{{row.flightNumber}}</p>
+    </div>
+    <div class="row-cell">
+        <p>{{row.scheduledDate | date:"dd/MM/yy" }}</p>
+    </div>
+    <div class="row-cell">
+        <p>{{row.scheduledDate | date:"hh:mm" }}</p>
+    </div>
+    <div class="row-cell">
+        <p>{{row.originDestination}}</p>
+    </div>
+    <div (click)="onLog(row.id)" id="row.id" class="row-cell input-field">
+        <p *ngIf="row.registration === '' || row.registration === null">...........</p>
+        <p *ngIf="row.registration !== '' && row.registration !== null">{{row.registration}}</p>
+    </div>
+</div>

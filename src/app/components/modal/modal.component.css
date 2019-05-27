@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(0, 0%, 0%, 40%);
+}
+
+.modal-header {
+    width: 359px;
+    height: 61px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0
+}
+
+.modal-container {
+    width: 359px;
+    margin-left: 40vw;
+    margin-top: 30vh;
+    background-color: #f0f0f0
+}
+
+.fligth-number,
+.fligth-date {
+    font: normal bold 21px SourceSansPro, sans-serif;
+    color: #000000;
+    padding-left: 75px;
+    padding-top: 14px;
+}
+
+.fligth-date {
+    font-size: 12px;
+    padding-top: 5px;
+    font-weight: normal;
+}
+
+.close-button {
+    background: url("https://listimg.pinclipart.com/picdir/s/35-356107_close-button-icon-png-clipart.png") center/cover;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-right: 27px;
+}
+
+
+/* Center */
+
+.modal-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 351px;
+    height: 108px;
+    background-color: #f0f0f0;
+}
+
+.label {
+    padding-left: 25px;
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+.input {
+    padding: 0 25px;
+    border: 2px solid #d8d8d8;
+    height: 37px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+
+/* Footer */
+
+.footer {
+    width: 359px;
+    height: 61px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.close-button-footer {
+    width: 122px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 49px;
+    border: 2px solid #18abf4;
+    color: #18abf4;
+    font-family: SourceSansPro, sans-serif;
+    font-size: 14px;
+}
+
+.save-button {
+    width: 122px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 9px;
+    margin-right: 55px;
+    border: 2px solid #18abf4;
+    background-color: #52c0f7;
+    color: #eeeeee;
+    font-family: SourceSansPro, sans-serif;
+    font-size: 14px;
+}

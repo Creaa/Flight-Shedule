@@ -1,0 +1,10 @@
+<div>
+    <grid-header [headers]="sampleHeaders">
+    </grid-header>
+    <div *ngIf="rows">
+        <data-row (messageEvent)="receiveMessage($event)" *ngFor="let row of rows" [row]="row">
+        </data-row>
+    </div>
+    <app-modal (messageEvent)="receiveMessage($event)" *ngIf="filteredFlight" [row]="rows"
+        [flightData]="filteredFlight"></app-modal>
+</div>

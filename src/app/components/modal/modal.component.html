@@ -1,0 +1,26 @@
+<div class="modal-view">
+    <div *ngFor="let flight of flightData" class="modal-container">
+        <div class="modal-header">
+            <div class="header-info">
+                <p class="fligth-number">{{flight.flightNumber}} Registration</p>
+                <p class="fligth-date">{{flight.scheduledDate | date:'dd/MM/yy - hh:mm'}}</p>
+            </div>
+            <span (click)="closeModal()" class="close-button"></span>
+        </div>
+        <div class="modal-center">
+            <label class="label" for="">Registration</label>
+            <input (change)="changeRegistration($event)" ng-model="regInput" ng-minlength="2" class="input"
+                value={{flight.registration}} list="registrationNumbers" name="registrationNumber">
+            <datalist ng-show="regInput.length" style="max-height: 65px;" (input)="filterdata(input.value)"
+                class="datalist" id="registrationNumbers">
+                <div *ngFor="let row of row">
+                    <option value="{{row.registration}}">{{row.registration}}</option>
+                </div>
+            </datalist>
+        </div>
+        <footer class="footer">
+            <button (click)="closeModal()" class="close-button-footer">CANCEL</button>
+            <button (click)="saveModal()" class="save-button">SAVE</button>
+        </footer>
+    </div>
+</div>
